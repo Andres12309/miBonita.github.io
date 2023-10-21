@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiere vovler a compartir conmigo?</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: blue;
+        font-family: Arial, sans-serif;
+      }
+      #container {
+        text-align: center;
+      }
+      h1 {
+        font-size: 32px;
+        color: #ffff;
+      }
+      #buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 10px;
+        color: #ffff;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: green;
+      }
+
+      #btnNo {
+        background-color: yellow;
+      }
+      #btnNo:hover {
+        background-color: black;
+      }
+
+      img {
+        margin-top: 30px;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <script>
+      function accionParaCundoDIgaSi() {
+        alert("Estare esperando por ti!!! ");
+      }
+
+      function mueveElBoton() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        const newWidth = Math.random() * width;
+        const newHeight = Math.random() * height;
+
+        const btnNo = document.getElementById("btnNo");
+        btnNo.style.position = "absolute";
+        btnNo.style.left = newWidth + "px";
+        btnNo.style.top = newHeight + "px";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>¿Quiere volver a compartir momentos conmigo?</h1>
+      <div id="buttons">
+        <button onclick="accionParaCundoDIgaSi()" id="btnSi">Si</button>
+        <button id="btnNo" onmouseover="mueveElBoton()">No</button>
+      </div>
+
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGMhYg5I_HSq3OZKTPa7pNs4k4G8dJZaLVR4tiPwrY3wK4D747qc3S5fDHrIffLlvHssw&usqp=CAU"
+      />
+
+      <script>
+        function accionParaCundoDIgaSi() {
+          const respose = confirm(
+            "Esta segura que quieres volver a compartir conmigo!!!"
+          );
+          if (respose) {
+            window.location.href = "opcionsi.html";
+          } else {
+            alert("Gracias por todo y perdon, por no ser suficiente...!!!");
+          }
+        }
+
+        function mueveElBoton() {
+          const width = window.innerWidth;
+          const height = window.innerHeight;
+
+          const newWidth = Math.random() * width;
+          const newHeight = Math.random() * height;
+
+          const btnNo = document.getElementById("btnNo");
+          btnNo.style.position = "absolute";
+          btnNo.style.left = newWidth + "px";
+          btnNo.style.top = newHeight + "px";
+        }
+      </script>
+    </div>
+  </body>
+</html>
